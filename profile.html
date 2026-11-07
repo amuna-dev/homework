@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Профиль</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <main class="card">
+    <h1>Профиль</h1>
+
+    <!-- Задача 3: пока данные грузятся — «Загрузка...» -->
+    <p id="loading" class="loading">Загрузка...</p>
+
+    <div id="profile-error" class="form-error" role="alert" hidden></div>
+
+    <section id="profile" class="profile" hidden>
+      <img id="avatar" class="avatar" src="img/avatar-placeholder.svg" alt="Фото пользователя"
+           width="128" height="128">
+      <h2 id="full-name" class="profile-name">—</h2>
+
+      <ul class="info">
+        <li>
+          <span class="info-label">Email</span>
+          <span id="email" class="info-value"></span>
+        </li>
+        <li>
+          <span class="info-label">Возраст</span>
+          <span id="age" class="info-value"></span>
+        </li>
+        <li>
+          <span class="info-label">Город</span>
+          <span id="city" class="info-value"></span>
+        </li>
+      </ul>
+    </section>
+
+    <div class="actions">
+      <button id="retry-btn" class="btn" type="button" hidden>Повторить</button>
+      <button id="logout-btn" class="btn btn-outline" type="button">Выйти</button>
+    </div>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.7.9/dist/axios.min.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/profile.js"></script>
+</body>
+</html>
